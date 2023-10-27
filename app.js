@@ -1,5 +1,6 @@
 const express = require("express");
 const tasks = require("./routes/tasks");
+require("./db/connect");
 const app = express();
 
 //middle ware
