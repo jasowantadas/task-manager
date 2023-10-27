@@ -1,9 +1,11 @@
 const mongoose = require("mongoose");
 
-const connectionString =
-  "mongodb+srv://jasowanta21:Kolkata12@nodeexpressprojects.ltwwk8r.mongodb.net/TASK-MANAGER?retryWrites=true&w=majority";
+const connectDB = (url) => {
+  return mongoose.connect(url);
+};
 
-mongoose
-  .connect(connectionString)
-  .then(() => console.log("Connected to DB..."))
-  .catch((err) => console.log(err));
+module.exports = connectDB;
+//   .then(() => console.log("Connected to DB..."))
+//   .catch((err) => console.log(err));
+
+//to run the server and connect to database at sync we have to use async while connecting
